@@ -1,0 +1,20 @@
+package Practice;
+
+public class learning {
+
+	public static void main(String[] args) {
+		float decimal = 45.5f;
+		System.out.println(decimal);
+		double  number = 45.5;
+		System.out.println(number);
+		char character = 97;
+		char uppercase = 65;
+		System.out.println(uppercase);
+		System.out.println(character);
+		boolean right = true; //not possible to store 0's
+		System.out.println(right);
+		System.out.println("Hello world");
+
+	}
+
+}
