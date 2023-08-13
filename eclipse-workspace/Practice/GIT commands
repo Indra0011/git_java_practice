@@ -17,3 +17,7 @@ GIT commands
 12. git log // to get all logs of commit
 
 13. git commit -a -m "to skip staging and commit"
+
+14. git diff                 // difference between current working file and file in git (committed)
+
+15 git diff --staged       // difference between current file and staging
