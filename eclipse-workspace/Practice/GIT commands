@@ -21,3 +21,30 @@ GIT commands
 14. git diff                 // difference between current working file and file in git (committed)
 
 15 git diff --staged       // difference between current file and staging
+16 git rm --cached  "file name" // to remove file from git
+
+17. git clone "git link" -> to copy git data in local
+
+18. echo "# git_java_practice" >> README.md
+-> to add to remote repository using ssh.
+1. key has to be created with below command 
+->ssh-keygen -o // the generated key should be pasted in sshkey in github setting.
+->git remote add origin https://github.com/Indra0011/git_java_practice.git // for connection to remote repository using https
+-> git remote add origin git@github.com:Indra0011/git_java_practice.git                            // for connection to remote repository using ssh
+-> git push -u origin main  // push to remote repository
+
+//+++ to create remote repository
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Indra0011/git_java_practice.git
+git push -u origin main
+//--- to create remote repository
+
+// ++ push existing repository from command line
+git remote add origin https://github.com/Indra0011/git_java_practice.git
+git branch -M main
+git push -u origin main
+//-- push existing repository form command line 
+
