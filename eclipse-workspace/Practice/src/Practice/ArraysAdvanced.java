@@ -7,6 +7,7 @@ import java.util.Arrays;
  *  memory is contigousouly allocated for arrays( if required continous memory is not available in ram , memory error is thrown
  *  array size is fixed , if we change in backend new array is created in memory 
  *  java has utility class to support additional funcationalities ex:- like sorting array
+ *  
  */
 public class ArraysAdvanced {
 
