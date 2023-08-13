@@ -1,0 +1,62 @@
+Notes
+
+types of Inheritance
+
+1. Single Inheritance 
+2. multi-level inheritance (if a child class is inherited by another class -> parent -> child -> grandchild)
+3. multiple inheritance (more then one parent ) - not supported in java
+		-> Why multiple inheritance is not supported ? - > due to ambiguity
+		
++
+Access specifiers :- can be used with both methods and variables
+ 					within class  |  outside class same package | outside package IS-A relationship|outside package no IS-A relationship 
+ 	1. public -       yes                yes                              Yes                                 Yes
+ 	2. protected -    yes                yes                              Yes                                 NO
+ 	3. private -      yes                No                               No                                  No
+ 	4. default -      yes                Yes                              No                                  NO
+ 	
+ 	
+ JDK -> contains all the library files , prewritten classes
+ JRE -> The environment(inside ram) where jvm executes the bytecode 
+ JvM - > executes the bytecode
+ JVM consists of :- class loader  ,jvm data area ,	execution engine (using these jvm components the java program is executed)
+ 
+ 1. Class loader subsystem :- Jvm makes use of class loader subsystem to load the class(bytecode).
+ 		during loading three processess are involved Loading,Linking,initialization
+ 		
+ 		->Loading :- our entire bytecode is loaded in this stage
+ 			-> 	bootstrap loader    - all the pre-defined libraries (util package) are loaded
+ 			->  application loader  - all our custom class is loaded
+ 			->  extension loader
+ 		
+ 		->Linking :- Structure and syntax of java program
+ 		    ->verification : checks if syntax is correct
+ 		    ->preparation  : all the references are prepared(memory for static variables will be created and default value is initialized in heap of JRE)
+ 		    ->resolve      : 
+ 				
+ 		->Initialization : static block is executed 
+ 		
+2. JVM runtime data area :- When the class is loaded all the data is present(loaded) here
+
+       -> Method area : variables, constructors , method , entire code  is present in method area
+       
+       -> stack area : when method is called (local variable , reference local variable)
+       
+       -> heap area  : when object is create that data is present here (instance variable , static variable,object)
+       
+       -> PC register : contains address of currently running instruction(also used in multi threading)
+       
+       -> Native stack : when external libraries are used written in other languages (dll) will be kept in native stack.
+       
+3. Execution Engine:
+		
+		-> Interpreter : converts the bytecode to 0,1's line by line(not at once the byte code is converted to 0,1)
+		                 in case of loops again and again the same line is converted to 0,1's (to make this process fast JIT is used)
+		
+		-> JIT compiler(support to interpreter) : only repeatative code is converted by JIT (at once it converts not line by line)     
+		
+		-> Garbage collector : de-allocate memory in heap area if no reference variable  is present to object in heap
+		
+		-> Java native interface(JNI) : bride between java and other native language code(c,c++)
+
+

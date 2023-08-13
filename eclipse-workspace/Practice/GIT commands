@@ -1,0 +1,16 @@
+GIT commands
+
+1. git --version
+2. git config
+3. git config --global --list  // to get user name and email (to know which user is making changes)
+4. git config --global user.name "indra"  // to set user name
+5. git config --global user.email "indrasenareddy0088@gmail.com" //to set user name  
+
+6. git init		// to create local repository .
+7. git status   // 
+
+8. rm -rf .git  // to delete local git repository (.git file)
+
+9. git init -b main // when we need to create a main branch which is different from master (default)
+10. git add "file path" // to add the file to staging area.
+11. git commit -m "message to track"
