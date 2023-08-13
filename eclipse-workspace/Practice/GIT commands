@@ -14,3 +14,6 @@ GIT commands
 9. git init -b main // when we need to create a main branch which is different from master (default)
 10. git add "file path" // to add the file to staging area.
 11. git commit -m "message to track"
+12. git log // to get all logs of commit
+
+13. git commit -a -m "to skip staging and commit"
