@@ -30,7 +30,7 @@ GIT commands
 1. key has to be created with below command 
 ->ssh-keygen -o // the generated key should be pasted in sshkey in github setting.
 ->git remote add origin https://github.com/Indra0011/git_java_practice.git // for connection to remote repository using https
--> git remote add origin git@github.com:Indra0011/git_java_practice.git                            // for connection to remote repository using ssh
+-> git remote add origin ygit@github.com:Indra0011/git_java_practice.git                            // for connection to remote repository using ssh
 -> git push -u origin main  // push to remote repository
 
 //+++ to create remote repository
@@ -47,4 +47,11 @@ git remote add origin https://github.com/Indra0011/git_java_practice.git
 git branch -M main
 git push -u origin main
 //-- push existing repository form command line 
+
+-> git remote -v  // get the remote repositories that can be accessed
+-> git tag -a  v1.0  -m "message"                    // annotated tag 
+-> git tag               // to get the tags 
+
+
+
 
