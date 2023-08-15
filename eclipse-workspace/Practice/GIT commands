@@ -49,8 +49,16 @@ git push -u origin main
 //-- push existing repository form command line 
 
 -> git remote -v  // get the remote repositories that can be accessed
--> git tag -a  v1.0  -m "message"                    // annotated tag 
+-> git tag -a  v1.0  -m "message"                    // annotated tag - to specify version for local repo
+-> git tag v1.1 -m "message"
+-> git show "version"
+-> git push origin v1.0  //tag for remote repo
 -> git tag               // to get the tags 
+
+//clone project
+
+-> git clone "https link of remote repo"
+
 
 
 
