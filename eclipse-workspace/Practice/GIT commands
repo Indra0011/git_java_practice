@@ -79,11 +79,7 @@ git push origin "branch name"
 git pull origin main // before merge this step has to be performed
 git push origin main
 
-// git rebase  - used to merge two branches
- To test rebase
- 
- // git feature3
-
+// git rebase  - used to merge two branch
 
 
 
