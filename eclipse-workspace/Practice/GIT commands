@@ -82,6 +82,20 @@ git push origin main
 
 // git rebase "branch name" - used to merge two branches
 
+// to move to a different commit
+git checkout "commit checksum"  -> from this data we can create new branch and proceed with that branch
+
+// git stash
+
+ git stash      // to save code instead of commit
+ git stash list  // to list all stashed changes
+ git stash apply // to re-apply all the stashed changes.
+ 
+// git fork
+
+// git pull request
+
+
 
 
 
