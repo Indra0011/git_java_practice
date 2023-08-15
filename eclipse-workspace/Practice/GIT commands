@@ -62,7 +62,7 @@ git push -u origin main
 // create branch
 git switch -c "branch name" // to create a branch and switch to this new branch
 git switch           - to switch to a different branch
-git branch         - to know number of branches
+git branch         - to know number of branchess
 
 // delete branch
 
@@ -72,6 +72,13 @@ git branch -d "branch name"
 
 git push origin "branch name"
 
-// git branch merge
+// git branch merge "Feature name"
+
+// to push merged feature to remote rep
+
+git pull origin main // before merge this step has to be performed
+git push origin main
+
+
 
 
