@@ -64,6 +64,12 @@ git switch -c "branch name" // to create a branch and switch to this new branch
 git switch           - to switch to a different branch
 git branch         - to know number of branches
 
+// delete branch
+
+git branch -d "branch name"
+
+// add the new created branch to git remote repo
+
 
 
 
