@@ -59,6 +59,11 @@ git push -u origin main
 
 -> git clone "https link of remote repo"
 
+// create branch
+git switch -c "branch name" // to create a branch and switch to this new branch
+git switch           - to switch to a different branch
+git branch         - to know number of branches
+
 
 
 
