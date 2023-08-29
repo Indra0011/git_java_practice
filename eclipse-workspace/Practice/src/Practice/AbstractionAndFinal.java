@@ -4,7 +4,7 @@ package Practice;
  * 1. abstract keyword can be used with the method 
  * 2. if any method has only signature but not implementation it's mandatory to have abstract keyword
  * 3. if there is atleast one abstract method in class then class should also be abstract
- * 4. abstract methods does not have implementation only declaration is present
+ * 4. abstract methods does not have implementatio*-n only declaration is present
  * 5. an abstract class may or may not have abstract methods , but if abstract method is present then class has to be abstract
  * 6. abstract class cannot be instantiated(incomplete class) , object cannot be created
  * 7. A child class inheriting abstract class can be instantiated 

@@ -69,6 +69,7 @@ class multiInterface implements ramma,thiru   // ambiguity issue - from which in
 
 class multiInter implements ramma,thiru
 {
+	@Override
 	public void show()                // resolves ambiguity issue.
 	{
 		ramma.super.show();

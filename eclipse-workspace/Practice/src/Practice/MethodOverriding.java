@@ -6,6 +6,7 @@ package Practice;
 public class MethodOverriding {
 
 	public static void main(String[] args) {
+		
 		// TODO Auto-generated method stub
 		IPhone myPhone = new IPhone();
 		myPhone.call();

@@ -43,7 +43,7 @@ class C extends B
 	}
 	public C(int c)
 	{
-		super();
+		super(10);
 		System.out.println("int c");
 	}
 }
