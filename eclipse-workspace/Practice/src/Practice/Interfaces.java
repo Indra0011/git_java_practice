@@ -75,6 +75,7 @@ class D
 {
 	 int num;
 	 //B b = new B();   B is accessible since they are in same class 
+	 
      void show()
 	{
 		System.out.println("hello D");

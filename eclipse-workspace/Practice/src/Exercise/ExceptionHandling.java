@@ -19,7 +19,7 @@ import java.util.Scanner;
  *   if exception occurs in the finally block , it should be handled using try catch in finally block.
  *   if exception occurs in catch block still the finally is also executed.
  *   even if return statement is present in try and catch block finally block is executed.
- *   when Syste.exit(0) is present  in try and catch then finally is not executed as jvm it self is turned off and stops complete execution.
+ *   when System.exit(0) is present  in try and catch then finally is not executed as jvm it self is turned off and stops complete execution.
  *   
  *   under throw statement if any statement is written then compilation issue will occur as these statements will never execute
  *   only catch and finally can be present.

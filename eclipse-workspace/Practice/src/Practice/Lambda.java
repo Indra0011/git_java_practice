@@ -74,10 +74,16 @@ class multiInter implements ramma,thiru
 	{
 		ramma.super.show();
 	}
+	@Override
+	public void show1()
+	{
+		
+	}
 }
 interface calca
 {
 	void show();
+	
 }
 
 interface calcul
@@ -87,6 +93,7 @@ interface calcul
 
 interface ramma
 {
+	void show1();
 	default void show()
 	{
 		System.out.println("in ramma");
@@ -95,6 +102,7 @@ interface ramma
 
 interface thiru
 {
+	void show1();
 	default void show()
 	{
 		System.out.println("in thiru");

@@ -8,7 +8,7 @@ package Practice;
  *  one interface cannot implement another interfaces.
  *  one interface can extend another multiple interfaces ( when exteneded interface is implemented by class it has to implement both the interface methods)
  *  
- *  
+ *  can be used to achieve loose coupling(by using concept of runtime polymorphism)
  *  
  */
 public class InterfaceDemo {

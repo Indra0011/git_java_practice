@@ -33,7 +33,7 @@ interface cal
 	{
 		System.out.println();
 	}
-	public static void multi()
+	public static void multip()
 	{
 		System.out.println();
 	}

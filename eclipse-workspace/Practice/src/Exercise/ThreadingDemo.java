@@ -46,16 +46,20 @@ public class ThreadingDemo {
 		System.out.println("is t1 thread alive " + t1.isAlive());  // only when thread is handed to thread scheduler(after start method)
 		
 		t1.start();         // this will call the run method of the class (which has implemented runnable interface)
+		t1.join();
+		
 		t2.start();        // these threads are randomly executed by the thread scheduler
+		t2.join();
 		t3.start();
+		t3.join();
 		System.out.println("Is t1 thread alive after invoking start method "+t1.isAlive());
 		//b.start() in case thread class is extended , instead of starting thread object,  b is child class object
 		// instead of start of run method(b.run() is directly called then main thread will execute them in order(single thread programming) since thread scheduler can only 
 		// control when object.start() is used 
         
-		t1.join(); //  To make the main thread wait(wait till t1 thread complete and join with main thread)
-		t2.join();
-		t3.join();
+	//	t1.join(); //  To make the main thread wait(wait till t1 thread complete and join with main thread)
+	//	t2.join();
+	//	t3.join();
 		System.out.println("All threads finished completed- can close resources and main thread ended"); // this is executed at the end after all three threads are completed
 			// since join will make the main thread wait till it is completed.
 		
@@ -132,7 +136,7 @@ class Numbers implements Runnable
 class MultiThreadSingleRun implements Runnable
 {
 	@Override
-	synchronized public void run()    // when synchronized is used only one thread is finished and then next thread executes the run method
+    public void run()    // when synchronized is used only one thread is finished and then next thread executes the run method
 	{
 		String tName = Thread.currentThread().getName();     // where run method is called from multiple threads
 		switch(tName)
@@ -152,7 +156,15 @@ class MultiThreadSingleRun implements Runnable
 	
 	public void numbers()
 	{
+		try
+		{
+		Thread.sleep(1000);  
 		System.out.println("Numbers-multithreading");
+		}
+		catch(Exception e)
+		{
+			System.out.println("error");
+		}
 	}
 	public void alphabets()
 	{
