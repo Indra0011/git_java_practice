@@ -4,10 +4,17 @@ package Exercise;
  * 2. download jar files from db vendor sites(required to connect to specific db)
  * 3. load and register driver in java(java project -> properties -> java build path -> libraries -> add external jar)
  * 4. establish connection
- * 5. create prepared statement for querying
+ * 5. create statement/prepared statement for querying
  * 6. execute query 
  * 7. process results from above step
  * 8. close connection(resources)
+ * 
+ *  1. executeQuery() -> used for select queries , output of this statement is ResultSet
+ * 2. executeUpdate() -> used for non-select queries , output is of type int ( contains no. of rows affected)
+ * 3. execute ->  can be used for both select and non-select queries , output is of type boolean. 
+ * 				  based on the boolean value we can get the resultSet in case of this statement.
+ * 4. executeBatch() -> when multiple queries has to be executed this is efficient , as number of db hit's will be reduced.(multiple
+ * 						quries will be sent as a batch).
  */
 import java.sql.*;
 public class Jdbc {
