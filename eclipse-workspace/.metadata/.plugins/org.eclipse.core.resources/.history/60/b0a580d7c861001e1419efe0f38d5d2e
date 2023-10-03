@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body style="align-content: center;">
+	<h1>Registration Form</h1>
+<form action = "">
+	<table>
+		<tr>
+			<td>
+				Name
+			</td>
+			<td>
+				<input type="text" name="User name"/>
+				
+			</td>
+		</tr>
+	</table>
+	
+	
+</form>
+</body>
+</html>

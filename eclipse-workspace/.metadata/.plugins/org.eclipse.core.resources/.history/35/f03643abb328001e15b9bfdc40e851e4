@@ -1,0 +1,33 @@
+package Practice;
+/*
+ * 
+ * 
+ */
+
+public class Interfaces {
+
+	public static void main(String[] args)
+	{
+		D  temp = new D();
+		temp.show();
+	}
+}
+
+class D
+{
+	 int num;
+	 B b = new B();
+     void show()
+	{
+		System.out.println("hello D");
+		b.show();
+	}
+	
+	class B
+	{
+		public void show()
+		{
+			System.out.println("hello ");
+		}
+	}
+}

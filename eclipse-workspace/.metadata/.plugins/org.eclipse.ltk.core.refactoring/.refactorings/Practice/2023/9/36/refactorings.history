@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;Exercise.AnnotationAssciation&apos; to &apos;EnumsDemo&apos;&#x0D;&#x0A;- Original project: &apos;Practice&apos;&#x0D;&#x0A;- Original element: &apos;Exercise.AnnotationAssciation&apos;&#x0D;&#x0A;- Renamed element: &apos;Exercise.EnumsDemo&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;AnnotationAssciation&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;Exercise{AnnotationAssciation.java[AnnotationAssciation" matchStrategy="1" name="EnumsDemo" qualified="false" references="true" similarDeclarations="false" stamp="1693713533625" textual="false" version="1.0"/>
+</session>

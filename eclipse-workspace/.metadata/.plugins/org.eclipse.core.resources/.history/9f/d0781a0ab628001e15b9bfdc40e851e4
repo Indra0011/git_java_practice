@@ -1,0 +1,48 @@
+package Practice;
+/*
+ * inner class 
+ * 1. member inner class
+ * 2. static inner class ( class cannot be static , but an inner class can be static 
+ * 3. anonymous inner class (used frequently)
+ * 
+ */
+
+public class Interfaces {
+
+	public static void main(String[] args)
+	{
+		D  temp = new D();
+		temp.show();
+	//	E b = new E(); // Since E is inside D it's not accessible
+		D.E	e = temp.new E();  // to create object of inner class we need object of outer class
+		e.show();
+		
+		D.F 	f = new D.F();
+	}
+}
+
+class D
+{
+	 int num;
+	 //B b = new B();   B is accessible since they are in same class 
+     void show()
+	{
+		System.out.println("hello D");
+		//b.show();
+	}
+	
+	class E                     //inner class
+	{
+		public void show()
+		{
+			System.out.println("hello E");
+		}
+	}
+	static class F
+	{
+		public void show()
+		{
+			
+		}
+	}
+}

@@ -1,0 +1,5 @@
+INDEX VERSION 1.4+C:\Users\indra.sena_clear\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+0.index
+3765061828.index
+3988712874.index
+123231967.index

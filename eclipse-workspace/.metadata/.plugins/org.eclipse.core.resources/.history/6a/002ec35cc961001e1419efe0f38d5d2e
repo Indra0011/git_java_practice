@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body style="align-content: center;">
+	<h1>Registration Form</h1>
+<form action = "">
+	<table>
+		<tr>
+			<td>
+				Name
+			</td>
+			<td>
+				<input type="text" name="UserName"/>
+				
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Address
+			</td>
+			<td>
+				<input type="text" name="UserAddress"/>
+				
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Mobile number
+			</td>
+			<td>
+				<input type="text" name="UserNumber"/>
+				
+			</td>
+		</tr>
+		<tr>
+			<input type="submit" value="Register" />
+		</tr>
+	</table>
+	
+	
+</form>
+</body>
+</html>

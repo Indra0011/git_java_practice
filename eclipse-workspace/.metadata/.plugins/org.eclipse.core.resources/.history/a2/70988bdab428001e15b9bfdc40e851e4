@@ -1,0 +1,36 @@
+package Practice;
+/*
+ * 
+ * 
+ */
+
+public class Interfaces {
+
+	public static void main(String[] args)
+	{
+		D  temp = new D();
+		temp.show();
+		E b = new E(); // Since E is inside D it's not accessible
+		D.E	e = new D.E();  // to create object of inner class we need object of outer class or use outerclass.innerclass
+		e.show();
+	}
+}
+
+class D
+{
+	 int num;
+	 //B b = new B();   B is accessible since they are in same class 
+     void show()
+	{
+		System.out.println("hello D");
+		//b.show();
+	}
+	
+	class E                     //inner class
+	{
+		public void show()
+		{
+			System.out.println("hello E");
+		}
+	}
+}

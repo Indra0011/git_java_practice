@@ -1,0 +1,48 @@
+package com.telusko.learning;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/reg")      // based on url mappings specified in servlet , that will be specified in this annotations
+public class Registration extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+    public Registration() {
+        super();
+        System.out.println("Servlet instantiation");
+    }
+
+	public void init(ServletConfig config) throws ServletException {
+		System.out.println("Servlet initialized");
+	}
+
+	public void destroy() {
+		System.out.println("Servlet de-initialized");
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String username = request.getParameter("UserName");
+		String userAddr = request.getParameter("UserAddress");
+		String userNumber = request.getParameter("UserNumber");
+		
+		System.out.println(username);
+		// to display the same data to user again
+		
+		PrintWriter pw = response.getWriter();
+		pw.println("<html> <head> <title> Result </title></head>");
+		pw.println("<body align: 'center'>");
+		pw.println("Details: "+username + " "+userAddr);
+		pw.println("</body></html>");
+		
+	//	pw.println("Entered user name is "+username);
+	}
+
+}

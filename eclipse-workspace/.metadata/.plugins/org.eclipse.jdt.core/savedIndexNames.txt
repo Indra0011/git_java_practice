@@ -1,0 +1,10 @@
+INDEX VERSION 1.134+C:\Users\indra.sena_clear\eclipse-workspace\.metadata\.plugins\org.eclipse.jdt.core
+2380175872.index
+1595069590.index
+2446798781.index
+557760305.index
+123231967.index
+3765061828.index
+3197628505.index
+1865797976.index
+3988712874.index

@@ -1,0 +1,15 @@
+package Practice;
+public class Inheritance {
+	public static void main(String args[])
+	{
+		calc calculator = new calc();
+		double sum = calculator.add(2,5);
+		System.out.println(sum);
+	}
+
+}
+
+class clac
+{
+	
+}

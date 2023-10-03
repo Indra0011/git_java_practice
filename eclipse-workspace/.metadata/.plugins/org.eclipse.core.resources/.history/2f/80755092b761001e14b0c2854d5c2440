@@ -1,0 +1,21 @@
+package com.telusko.servletsDemo;
+/*
+ * 1. browser send's the request(either static or dynamic)
+ * 2. server accepts the request and identify whether request is for static response or dynamic response
+ * 3. if request if for static resource -server responds back with copy of static resource
+ * 4. if request if for static resource and server doesn't have the required resource it will generate 404-page not found error
+ * 5. if request if for dynamic response, then server will identify for that request which .java code to be executed.
+ * 6. to identify which .java file(servlet/resource) will be used to response back we use "web.xml/annotations".
+ * 7. Once the required resource is available then server will handover the control to "Container"/servlets.
+ * 8. container will now execute the .java code based on it's "life cycle - actions".
+ * 
+ */
+
+public class ServeletsDemo1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

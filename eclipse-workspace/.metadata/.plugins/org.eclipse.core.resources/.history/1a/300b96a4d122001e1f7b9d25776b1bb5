@@ -1,0 +1,73 @@
+package Practice;
+/*
+ * encapsulation :- Private members, getters and setters 
+ */
+public class EncapsulationConstructor {
+
+	public static void main(String[] args) {				
+		Dogs roxy = new Dogs("Roxy",10,15000);            //constructor is invoked automatically when object is created , When we need any statements to be executed immediately 
+														 // after object is created.
+		System.out.println(roxy.getName());
+		Dogs boxy = new Dogs();
+		System.out.println(boxy.getName());
+	}
+
+}
+
+class Dogs
+{
+	private String name;                // Using constructors we can set value of a variable during object creation itself , or we can use setter or getters
+	private int    age;
+	private double cost;
+	
+	//parameterized constructor
+	public Dogs(String name,int age,double cost)  // constructor have same name as class name and it does not have return type(we cannot return anything from constructor)
+	{					                          // constructors are invoked when object of a class are created
+		this();                                  // this() method calls the other constructor of same class instead of super() which calls parents class constructor
+										         // using this() method we can also call other parameterized construtor by passing parameters in this() method.
+		                                         // Note :- this() method and super() method both cannot be present in the constructor.
+		this.name = name;
+		this.age  = age;
+		this.cost = cost;
+	}
+	//Zero parameterized constructor
+	public Dogs()                            // Constructor overloading - construtor having same name but different parameters.
+	{
+		// Super();								// First line of every constructor will have a super method by default , even if we don't write by design
+		// this();							    // if this() method is added manually then super() method is not executed. (i.e, super method call's the parent classes constructor)
+												 
+		System.out.println("Zero parameterized constructor");
+	}
+	public String getName()
+	{
+		return this.name;
+	}
+	public int getAge()
+	{
+		return this.age;
+	}
+	public double getCost()
+	{
+		return this.cost;
+	}
+	/*
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public double getCost() {
+		return cost;
+	}
+	public void setCost(double cost) {
+		this.cost = cost;
+	}
+	*/
+}
