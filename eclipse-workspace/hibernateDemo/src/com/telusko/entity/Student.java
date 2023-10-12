@@ -1,0 +1,49 @@
+package com.telusko.entity;
+import javax.persistence.*;
+
+@Entity(name = "userdetails")
+public class Student {
+	
+	@Id
+	@Column(name = "name")
+	private String name;
+	
+	@Column(name = "city")
+	private String city;
+	
+	@Column(name = "course")
+	private String course;
+	
+	@Column(name = "password")
+	private String password;
+	
+	public Student()
+	{
+		System.out.println("Object is created");
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public String getCourse() {
+		return course;
+	}
+	public void setCourse(String course) {
+		this.course = course;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+}

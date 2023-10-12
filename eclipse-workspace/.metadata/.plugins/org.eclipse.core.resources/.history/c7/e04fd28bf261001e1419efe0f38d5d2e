@@ -1,0 +1,30 @@
+package com.telusko.main;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/servletDispatch")
+public class servletDispatch extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+    public servletDispatch() {
+        super();
+    }
+
+    @Override
+	public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    	System.out.println("request received dispatcher 1");
+    	//response.sendRedirect("first.html");
+    	RequestDispatcher rd = request.getRequestDispatcher("/servletDispatch1");
+    	rd.forward(request, response);
+    	
+	}
+    
+    
+}

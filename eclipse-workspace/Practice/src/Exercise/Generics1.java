@@ -55,9 +55,9 @@ public class Generics1 {
 
 	}
 	
-	public static void callSleep(List<Human1> list)
+	public static void callSleep(ArrayList<Human1> lst)
 	{
-		for(Human1 h:list)
+		for(Human1 h:lst)
 		{
 			h.sleep();
 		}

@@ -1,0 +1,57 @@
+package com.telusko.model;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class Model {
+
+	private String name;
+	private String course;
+	private String city;
+	private String password;
+	private int rowsAffected ;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getCourse() {
+		return course;
+	}
+	public void setCourse(String course) {
+		this.course = course;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
+	public void insert()
+	{
+		try {
+			Connection con = JdbcUtility.getConnection();
+			String query = "Insert into userdetails(name,city,course,password) values(?,?,?,?)";
+			PreparedStatement ps = con.prepareStatement(query);
+			ps.setString(1, this.getName());
+			ps.setString(2, this.getCity());
+			ps.setString(3, this.getCourse());
+			ps.setString(4, this.getPassword());
+			rowsAffected = ps.executeUpdate();
+			
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+	}
+
+}

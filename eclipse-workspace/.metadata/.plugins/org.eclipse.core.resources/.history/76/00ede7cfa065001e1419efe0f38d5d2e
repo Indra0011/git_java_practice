@@ -1,0 +1,26 @@
+package com.telusko.entity;
+
+import java.util.Date;
+
+import javax.persistence.*;
+
+@Entity(name = "springers")
+public class Springers {
+
+	@Id
+	@Column(name="id")
+	private String id;
+	
+	@Column(name = "name")
+	private String name;
+	
+	@Temporal(TemporalType.DATE)
+	@Column(name="date")
+	private Date	date;
+	
+	@Temporal(TemporalType.TIME) //mapping the datatype of column defined in sql
+	@Column(name = "time")
+	private Date	time;
+	
+	
+}

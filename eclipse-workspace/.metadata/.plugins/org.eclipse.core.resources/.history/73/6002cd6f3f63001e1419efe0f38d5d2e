@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Session management</title>
+</head>
+<body>
+	<h1>Welcome to the store</h1>
+	<form action = './req1'>
+		
+	</form>
+
+</body>
+</html>

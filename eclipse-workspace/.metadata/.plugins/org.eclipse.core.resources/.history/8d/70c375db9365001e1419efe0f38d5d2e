@@ -1,0 +1,77 @@
+package com.telusko.main;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+import com.telusko.entity.Student;
+/*
+ * Eager loading - immediately trigger the query and load data to cache.
+ * 
+ */
+public class HibernateDemo1 {
+
+	public static void main(String[] args) {
+		//Activate hibernatefile
+		/*
+		Student s1 = new Student();
+		s1.setName("Tiger");
+		s1.setCity("los angles");
+		s1.setCourse("java spring");
+		s1.setPassword("yourMad");
+		
+		Student s2 = new Student();
+		s2.setName("Tiger");
+		s2.setCity("updating tiger record in database");
+		s2.setCourse("java spring");
+		s2.setPassword("iammad");
+		*/
+		
+		
+		
+		// activate hibernate
+		Configuration config = new Configuration();
+		
+		//load the hibernateConfig.xml into configuration object
+		config.configure("./com/telusko/main/HibernateConfig.xml");
+		
+		//Build the session Factory object using configuration object
+		//load and register driver, establish the connect and create the preparedstatement
+		SessionFactory sessionFactory=config.buildSessionFactory();
+		
+		//To perform operation(Task) create on session object
+		Session session=sessionFactory.openSession();
+		
+		//Begin the transaction w.r.t to particular session , for select query transaction object is not required.
+		Transaction transaction=session.beginTransaction();
+		
+		
+		//performing insert operation
+		//session.save(s1);
+		
+		//permorning update operation on s1 record
+		//session.update(s2);
+		//session.saveOrUpdate(s2);
+	
+		//performing select operation (retrivalfrom data using get() or load() method).
+		Student std = session.get(Student.class, "Tiger");
+		System.out.println(std.getPassword());
+		
+		// only once query is created and one database hit for same class and id("tiger") , due to hibernate level 1 cache
+		Student std1 = session.get(Student.class, "Tiger");
+		System.out.println(std1.getPassword());
+		
+		//using load
+		Student std2 = session.load(Student.class, "Tiger");
+		System.out.println(std2.getCourse());
+		
+		//commit the operation
+		transaction.commit();
+		
+		//close the session
+		session.close();
+		
+		
+
+	}
+
+}

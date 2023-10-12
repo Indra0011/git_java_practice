@@ -1,0 +1,63 @@
+package com.telusko.main;
+
+import com.telusko.util.*;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.*;
+
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+/*
+ * servlet - an application residing on server is known as server
+ * server - handles client http request and sends suitable response
+ */
+@WebServlet({ "/servletRegistration", "/reg" })
+public class servletRegistration extends HttpServlet {
+
+	@Override
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String username = request.getParameter("UserName");
+		String userAddr = request.getParameter("UserAddress");
+		String userNumber = request.getParameter("UserNumber");
+		
+		// since we are using jdbc in this project we have to add jar files , then select jar from properties of project -> deployment assembly
+		Connection con = null;
+		PreparedStatement ps = null;
+		String query  = "INSERT into studentinfo(sid,sname,sage,saddress) values (?,?,?,?)";
+		PrintWriter pw = response.getWriter();
+		try
+		{
+			con = JdbcUtility.getConnection();
+			ps	= con.prepareStatement(query);
+			ps.setInt(1, 50);
+			ps.setString(2, username);
+			ps.setInt(3,Integer.parseInt(userNumber));
+			ps.setString(4, userAddr);
+			int rowsAffected = ps.executeUpdate();
+			if(rowsAffected == 1)
+			{
+				response.sendRedirect("Success.html"); // redirection to another html page from browser on clicking register
+				//pw.println("<html><head><title> Registeration </title> </head> <body> Registration successful check db</body> </html>");
+			}
+			else
+			{
+				pw.println("<html><head><title> Registeration </title> </head> <body> Registration failed</body> </html>");
+			}
+			
+		}
+		catch(SQLException e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			JdbcUtility.closeResources(null, con, ps);
+			pw.close();
+		}
+	}
+
+}

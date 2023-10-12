@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Session management</title>
+</head>
+<body>
+	<h1>Welcome to the store</h1>
+	<form action = './req1'>
+		<table>
+			<tr>
+				<th>Name </th>
+				<td><input type="text" name="Name" /></td>
+			</tr>
+			<tr>
+				<th>Value</th>
+				<td><input type="text" name="Value" /></td>
+				
+			</tr>
+			<tr>
+				<td><input type="submit" name="Add to cart" /></td>
+			</tr>
+		</table>
+	</form>
+
+</body>
+</html>

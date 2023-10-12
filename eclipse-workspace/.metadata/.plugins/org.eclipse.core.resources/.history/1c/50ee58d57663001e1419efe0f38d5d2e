@@ -1,0 +1,47 @@
+package com.telusko.model;
+
+import java.sql.SQLException;
+
+public class Model {
+
+	private String name;
+	private String course;
+	private String city;
+	private String password;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getCourse() {
+		return course;
+	}
+	public void setCourse(String course) {
+		this.course = course;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
+	public void insert()
+	{
+		try {
+			JdbcUtility.getConnection();
+			
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+	}
+
+}

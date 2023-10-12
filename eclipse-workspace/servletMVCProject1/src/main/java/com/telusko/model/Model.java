@@ -1,0 +1,98 @@
+package com.telusko.model;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class Model {
+
+	private String name;
+	private String course;
+	private String city;
+	private String password;
+	private int rowsAffected ;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getCourse() {
+		return course;
+	}
+	public void setCourse(String course) {
+		this.course = course;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public int getRowsAffected() {
+		return rowsAffected;
+	}
+	
+	public void insert()
+	{ 
+		Connection con = null;
+		PreparedStatement ps = null;
+		try {
+			 con = JdbcUtility.getConnection();
+			String query = "Insert into userdetails(name,city,course,password) values(?,?,?,?)";
+			ps = con.prepareStatement(query);
+			ps.setString(1, this.getName());
+			ps.setString(2, this.getCity());
+			ps.setString(3, this.getCourse());
+			ps.setString(4, this.getPassword());
+			rowsAffected = ps.executeUpdate();
+			
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+		finally
+		{
+			JdbcUtility.closeResources(null, con, ps);
+		}
+	}
+	public static boolean fetch(String name,String password)
+	{
+		Connection con = null;
+		PreparedStatement ps = null;
+		ResultSet		rs = null;
+		try
+		{
+			con = JdbcUtility.getConnection();
+			String query = "select name,city,course from userdetails where name = ? && password= ?";
+			ps = con.prepareStatement(query);
+			ps.setString(1, name);
+			ps.setString(2, password);
+			rs = ps.executeQuery();
+			if(rs.next())
+			{
+				return true;
+			}
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			JdbcUtility.closeResources(rs, con, ps);
+		}
+		return false;
+	}
+	
+
+
+}

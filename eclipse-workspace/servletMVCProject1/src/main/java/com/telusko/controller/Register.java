@@ -1,0 +1,41 @@
+package com.telusko.controller;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.telusko.model.*;
+
+
+@WebServlet({ "/Register", "/register" })
+public class Register extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	
+
+	public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String name = request.getParameter("Name");
+		String city = request.getParameter("City");
+		String course = request.getParameter("Course");
+		String password = request.getParameter("Password");
+		
+		Model model = new Model();
+		model.setName(name);
+		model.setCity(city);
+		model.setCourse(course);
+		model.setPassword(password);
+		model.insert();
+		int rowsAffected = model.getRowsAffected();
+		if(rowsAffected == 1)
+		{
+			response.sendRedirect("/servletMVCProject1/success.jsp");
+		}
+		else
+		{
+			response.sendRedirect("/servletMVCProject1/failure.jsp");
+		}
+	}
+
+}

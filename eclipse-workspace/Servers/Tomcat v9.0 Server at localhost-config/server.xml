@@ -160,7 +160,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="serveletsDemo" path="/serveletsDemo" reloadable="true" source="org.eclipse.jst.jee.server:serveletsDemo"/><Context docBase="serveletsPractice" path="/serveletsPractice" reloadable="true" source="org.eclipse.jst.jee.server:serveletsPractice"/><Context docBase="servletRegistrationForm" path="/servletRegistrationForm" reloadable="true" source="org.eclipse.jst.jee.server:servletRegistrationForm"/></Host>
+      <Context docBase="serveletsDemo" path="/serveletsDemo" reloadable="true" source="org.eclipse.jst.jee.server:serveletsDemo"/><Context docBase="serveletsPractice" path="/serveletsPractice" reloadable="true" source="org.eclipse.jst.jee.server:serveletsPractice"/><Context docBase="servletRegistrationForm" path="/servletRegistrationForm" reloadable="true" source="org.eclipse.jst.jee.server:servletRegistrationForm"/><Context docBase="servletRegistration1" path="/servletRegistration1" reloadable="true" source="org.eclipse.jst.jee.server:servletRegistration1"/><Context docBase="servletRequestDispatch" path="/servletRequestDispatch" reloadable="true" source="org.eclipse.jst.jee.server:servletRequestDispatch"/><Context docBase="servletSessionTracking" path="/servletSessionTracking" reloadable="true" source="org.eclipse.jst.jee.server:servletSessionTracking"/><Context docBase="servletMVCProject1" path="/servletMVCProject1" reloadable="true" source="org.eclipse.jst.jee.server:servletMVCProject1"/></Host>
     </Engine>
   </Service>
 </Server>
